@@ -74,6 +74,8 @@ For nvidia users: Edit /etc/mkinitcpio.conf and add `nvidia nvidia_modeset nvidi
 For encrypted root users: your mkinitcpio hooks should look something like this: HOOKS=(base systemd autodetect microcode modconf kms keyboard sd-vconsole block sd-encrypt filesystems fsck), most importantly include sd-encrypt.
 For plymouth users: add the plymouth hook in mkinitcpio - make sure it is before sd-encrypt.
 
+I also like to uncomment/add Color, ILoveCandy and Verbose.
+
 ### Sudo, user
 Make an account:
 ```
