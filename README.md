@@ -6,7 +6,7 @@ The tutorial assumes you are using the systemd hook in mkinitcpio (which recentl
 Use something like `fdisk` to partition. I personally have a boot partition (type 1) of 3G and the rest is a root partition of type Linux x86-64 (type 23). In fdisk, simply type g for a new GPT-table, n for a new partition and t for changing the partition types. You'll have to format the partitions:
 ```
 mkfs.fat -F 32 /dev/efi_system_partition
-mkfs.ext4 /dev/root_partition
+mkfs.ext4 -L archlinux /dev/root_partition
 ```
 
 For an encrypted root partition, follow these steps instead:
